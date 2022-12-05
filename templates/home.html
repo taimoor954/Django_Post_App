@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{%block title%}
+    some awsome title
+{% endblock %}
+
+
+ 
+{% block body %}
+    {% for post in posts %}
+    <a href="{% url 'feed:detail' post.id %}">View details</a>
+    {{    post.text}} <br>
+   <img src="{{post.image.url}}" alt=""> 
+    <hr>
+    {% endfor %}
+{% endblock%}
