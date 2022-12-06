@@ -29,6 +29,7 @@ class AddPostImageView(FormView):
         print(form.cleaned_data['text'])
         print(form.cleaned_data['text'])
         print(form.cleaned_data['text'])
+        new_object = Posts.objects.create(text=form.cleaned_data['text'], image= form.cleaned_data['image'])
         return super().form_valid(form)
 
 #https://ccbv.co.uk/projects/Django/4.1/django.views.generic.base/TemplateView/ for refrence
