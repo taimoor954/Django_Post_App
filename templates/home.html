@@ -11,6 +11,7 @@
     {% for post in posts %}
     <a href="{% url 'feed:detail' post.id %}">View details</a>
     {{    post.text}} <br>
+    <h1>create at {{post.created_at}}</h1>
    <img src="{{post.image.url}}" alt=""> 
     <hr>
     {% endfor %}
